@@ -51,6 +51,7 @@ int main() {
     }
     std::cout << std::endl;
 
+    // Пример использования копирующего присваивания
     {
         std::cout << "Test 5" << std::endl;
         Vector vector1{1, 3, 5, 7};
