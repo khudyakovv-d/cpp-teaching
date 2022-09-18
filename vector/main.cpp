@@ -7,11 +7,15 @@ int main() {
     // При выходе из области видимости вызывается его деструктор
     {
         std::cout << "Test 1" << std::endl;
-        Vector vector1(10);
+        Vector vector1 = 10;
         int size = vector1.size();
         std::cout << size << std::endl;
     }
     std::cout << std::endl;
+
+    int x = 10;
+    int y = 5;
+    5+10;
 
     // Создаем объект с помощью new
     // При выходе из области видимости вызывается деструктор не вызывается - вызываем явно
@@ -51,13 +55,13 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Пример использования копирующего присваивания
     {
         std::cout << "Test 5" << std::endl;
         Vector vector1{1, 3, 5, 7};
 
         Vector vector2(10);
         vector2 = vector1;
+
         vector2[2] = 10;
 
         std::cout << vector1[2] << std::endl;

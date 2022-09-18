@@ -48,6 +48,10 @@ Vector::Vector(const Vector &vec) :
 }
 
 Vector &Vector::operator=(const Vector &vec) {
+    if (this == &vec) {
+        return *this;
+    }
+
     delete[] elem_;
 
     double *res_elem = new double[vec.size_];
@@ -61,3 +65,8 @@ Vector &Vector::operator=(const Vector &vec) {
 
     return (*this);
 }
+
+//Vector::Vector() {
+//    elem_ = new double[0];
+//    size_ = 0;
+//}

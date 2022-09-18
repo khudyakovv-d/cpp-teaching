@@ -32,7 +32,7 @@ private:
     int size_;
 public:
 
-    Vector(int size);
+    explicit Vector(int size);
 
     Vector(std::initializer_list<double> lst);
 
