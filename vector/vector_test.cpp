@@ -40,3 +40,17 @@ TEST_F(VectorTest, vector_copy_constructor_test_bad) {
     ASSERT_EQ(vector->size(), 11);
 }
 
+TEST(vector_test, vector_sum_of_three_vectors) {
+    Vector vector1{1, 3, 5, 7};
+    Vector vector2{3, 5, 7, 1};
+    Vector vector3{5, 7, 1, 3};
+
+    Vector res;
+    res = sum(vector1, vector2, vector3);
+
+    std::cout << res;
+
+    ASSERT_EQ(res[0], 9);
+    ASSERT_EQ(res[3], 11);
+}
+

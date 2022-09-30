@@ -32,6 +32,8 @@ private:
     int size_;
 public:
 
+    Vector();
+
     explicit Vector(int size);
 
     Vector(std::initializer_list<double> lst);
@@ -48,8 +50,19 @@ public:
 
     Vector &operator=(const Vector &vec);
 
+    Vector(Vector &&vec) noexcept ;
+
+    Vector &operator=(Vector &&vec) noexcept ;
+
+    operator std::string() const;
+
 };
 
+Vector operator+(const Vector &vec1, const Vector &vec2);
+
+Vector sum(const Vector &vec1, const Vector &vec2, const Vector &vec3);
+
+std::ostream& operator<<(std::ostream& o, const Vector& i);
 
 
 #endif //VECTOR_VECTOR_H

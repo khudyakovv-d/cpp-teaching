@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.22)
 project(vector_example)
 
+#Убрать при необходимости - выключает copy elision
+add_compile_options(-fno-elide-constructors)
+
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(vector_example vector_test.cpp)
