@@ -211,7 +211,7 @@ INSTANTIATE_TEST_SUITE_P(
                 BigIntPairArg(BigInt("1000"), BigInt("-1000"), "0"),
                 BigIntPairArg(BigInt("-1000"), BigInt("-1000"), "0"),
                 BigIntPairArg(BigInt("54321"), BigInt("123"), "54346"),
-                //BigIntPairArg(BigInt("54321"), BigInt("-123"), "27210"), //Дополнительный код
+                //BigIntPairArg(BigInt("54321"), BigInt("-123"), "-54348"), //Дополнительный код
                 //BigIntPairArg(BigInt("54321"), BigInt("-123"), "-54346"), //Прямой код
                 BigIntPairArg(BigInt("4294967296"), BigInt("512"), "4294967808")
         )
