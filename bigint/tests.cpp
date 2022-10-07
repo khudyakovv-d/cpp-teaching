@@ -208,7 +208,8 @@ INSTANTIATE_TEST_SUITE_P(
         BigIntXorTest,
         ::testing::Values(
                 BigIntPairArg(BigInt("10"), BigInt("1"), "11"),
-                BigIntPairArg(BigInt("1000"), BigInt("-1000"), "0"),
+                BigIntPairArg(BigInt("1000"), BigInt("-1000"), "-16"),  //Дополнительный код
+                BigIntPairArg(BigInt("1000"), BigInt("-1000"), "0"), //Прямой код
                 BigIntPairArg(BigInt("-1000"), BigInt("-1000"), "0"),
                 BigIntPairArg(BigInt("54321"), BigInt("123"), "54346"),
                 //BigIntPairArg(BigInt("54321"), BigInt("-123"), "-54348"), //Дополнительный код
@@ -221,6 +222,8 @@ TEST_P(BigIntXorTest, assignment_xor_op) {
     BigIntPairArg arg = GetParam();
     arg.val1 ^= arg.val2;
     ASSERT_EQ(arg.expected, (std::string) arg.val1);
+    int val = 1000 ^ (-1000);
+    std::cout << val;
 }
 
 TEST_P(BigIntXorTest, xor_op) {
