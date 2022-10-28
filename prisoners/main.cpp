@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "StrategyFactory.h"
-#include "strategies/AlwaysVoteCGameStrategy.h"
+#include "AlwaysVoteCGameStrategy.h"
 
 int main() {
     StrategyFactory strategyFactory;

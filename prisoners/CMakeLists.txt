@@ -4,6 +4,7 @@ project(prisoners)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(strategies)
+add_subdirectory(game_matrix)
 
 add_executable(prisoners main.cpp StrategyFactory.cpp StrategyFactory.h)
 
